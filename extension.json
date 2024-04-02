@@ -1,0 +1,13 @@
+{
+  "name": "UBM I2C Analyzer",
+  "apiVersion": "1.0.0",
+  "author": "Kyle Reynolds",
+  "version": "0.0.1",
+  "description": "This is a High Level Analyzer for the UBM protocol run on I2C. ",
+  "extensions": {
+    "UBM I2C Analyzer": {
+      "type": "HighLevelAnalyzer",
+      "entryPoint": "HighLevelAnalyzer.Hla"
+    }
+  }
+}
