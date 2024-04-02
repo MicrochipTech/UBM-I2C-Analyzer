@@ -1,5 +1,5 @@
 # UBM I2C Analyzer
-## ==================================================
+
 This High Level Analyzer will parse I2C traffic from a UBM host to a UBM controller.
 It will decode the commands read from or written to the UBM controller and print out the parsed data
 in a readable format to the terminal.
