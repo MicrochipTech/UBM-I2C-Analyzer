@@ -130,12 +130,12 @@ def PrintUBMOverviewRecord(record):
     print("UBM FRU Invalid: ", record[7]&1)
     print("UBM Controller Max Time Limit: ", (record[7]>>1) & 0x7F, 'seconds')
 
-    print("RCC: ", record[8]&1)
-    print("WCC: ", (record[8]>>1) & 1)
-    print("CLM: ", (record[8]>>2) & 1)
-    print("PRCCM: ", (record[8]>>3) & 1)
-    print("DTICCM: ", (record[8]>>4) & 1)
-    print("OSCCM: ", (record[8]>>5) & 1)
+    print("Read Checksum Creation: ", record[8]&1)
+    print("Write Checksum Checking: ", (record[8]>>1) & 1)
+    print("CPRSNT Legacy Mode: ", (record[8]>>2) & 1)
+    print("PCIe Reset Change Count Mask: ", (record[8]>>3) & 1)
+    print("Drive Type Installed Change Count Mask: ", (record[8]>>4) & 1)
+    print("Operational State Change Count Mask: ", (record[8]>>5) & 1)
 
     print("Number of DFC Status and Control Descriptors: ", record[10])
     print("Number of UBM Port Route Descriptors: ", record[11])
@@ -220,7 +220,7 @@ def PrintPortRouteInfoRecord(record):
 
         PrintPortRouteByte3Byte(record[8 + offset])
 
-        PrintMaxLinkRatesByte(record[9])
+        PrintMaxLinkRatesByte(record[9 + offset])
 
         print("HFC Starting Lane: ", record[10 + offset]&0x0F)
         print("HFC Identity: ", (record[10 + offset]>>4) & 0x0F)
