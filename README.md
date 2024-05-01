@@ -9,6 +9,9 @@ to allow the user to correlate parsed data to when the command was accessed in t
 ## Prerequisites
 You will need to know the UBM Controllers 7-bit target address. All UBM controllers most host the UBM FRU at 8-bit address 0xAE (7-bit 0x57).
 
+## Planned Corrections
+UBM Firmware Update Parsing only supports reads with stop bits. Reads with restart operations on firmware update will fail to parse properly
+
 ## Getting Started
 
 1. Select and setup the I2C signal from Saleae
